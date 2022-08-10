@@ -1,0 +1,20 @@
+@font-face{
+    src: url(../../../fonts/texgyreadventor-regular.otf);
+    font-family:tr;
+}
+
+
+.text1{
+    font-family:tr;
+    
+}
+
+.buton{
+    background-color: #ff8800;
+    border: none;
+}
+
+.buton :hover {
+    background-color: #d17409;
+    
+}
