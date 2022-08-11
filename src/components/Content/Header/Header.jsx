@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Titlu.css'
+import './Header.css'
 import {Button, Container, Row, Col, Image} from 'react-bootstrap'
 import imagine1 from '../../../assets/imagine1.png'
 

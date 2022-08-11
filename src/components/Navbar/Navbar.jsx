@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {Container, Nav, Navbar} from 'react-bootstrap'
-import './Header.css'
+import './Navbar.css'
 
 import logo from '../../assets/logo.png'
 
