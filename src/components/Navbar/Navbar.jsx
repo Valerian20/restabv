@@ -5,11 +5,14 @@ import './Navbar.css'
 
 import logo from '../../assets/logo.png'
 
+
+
 function Header() {
   return (
+   
     <Navbar bg="white" expand="lg" sticky='top' className="square border-bottom">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href='#home'>
         <img
               src={logo}
               width="150"
@@ -21,8 +24,8 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#rezervari">Rezervari</Nav.Link>
-            <Nav.Link href="#contulMeu">Contul meu</Nav.Link>
+            <Nav.Link href='#rezervari'>Rezervari</Nav.Link>
+            <Nav.Link href='#contul_meu'>Contul meu</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

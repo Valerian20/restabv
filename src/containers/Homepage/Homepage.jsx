@@ -1,19 +1,28 @@
 import React from 'react'
+import { Button, Row, Col, Card, Container, Image} from 'react-bootstrap';
+import img2 from '../../assets/img2.png'
+import imagine1 from '../../assets/imagine1.png'
+import './Homepage.css'
 
-
-import { Button, Row, Col, Card, Container} from 'react-bootstrap';
-import img2 from '../../../assets/img2.png'
-import './Cards.css'
-
-
-const Cards = () => {
+const Homepage = () => {
   return (
-    <Container className='mt-5'>
+    <div>
+    <Container>
+      <Row className='row align-items-center'>
+        <Col>
+        <h1 className='text1'>Alege din restaurantele tale preferate!</h1>
+        <Button variant="primary" className='mt-4 buton'>Rezerva acum!</Button>{' '}
+        </Col>
+        <Col>
+        <Image src={imagine1} alt='imagine1' fluid />
+        </Col>
+      </Row>
       <Row>
         <Col>
           <h1 >Restaurante</h1>
         </Col>
       </Row>
+
       <Row>
         <Col>
        <Card style={{ width: '18rem' }}>
@@ -53,7 +62,8 @@ const Cards = () => {
     </Col>
     </Row>
     </Container>
+    </div>
   )
 }
 
-export default Cards
+export default Homepage
