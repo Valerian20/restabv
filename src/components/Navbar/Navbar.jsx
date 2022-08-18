@@ -1,18 +1,22 @@
 import React from 'react'
 
-import {Container, Nav, Navbar} from 'react-bootstrap'
+import {Container, Nav, Navbar as NavbarBootStrap} from 'react-bootstrap'
 import './Navbar.css'
 
 import logo from '../../assets/logo.png'
+import { useAppContext } from '../../containers/Context/Context'
 
 
 
-function Header() {
+function Navbar({onNavigate}) {
+
+  const { setPath } = useAppContext()
+
   return (
    
-    <Navbar bg="white" expand="lg" sticky='top' className="square border-bottom">
+    <NavbarBootStrap onSelect={onNavigate} bg="white" expand="lg" sticky='top' className="square border-bottom">
       <Container>
-        <Navbar.Brand href='#home'>
+        <NavbarBootStrap.Brand onClick={()=> {setPath('#homepage')}} href="#homepage">
         <img
               src={logo}
               width="150"
@@ -20,17 +24,17 @@ function Header() {
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        </NavbarBootStrap.Brand>
+        <NavbarBootStrap.Toggle aria-controls="basic-navbar-nav" />
+        <NavbarBootStrap.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href='#rezervari'>Rezervari</Nav.Link>
-            <Nav.Link href='#contul_meu'>Contul meu</Nav.Link>
+            <Nav.Link onClick={()=> {setPath('#reservation')}} href="#reservation">Rezervari</Nav.Link>
+            <Nav.Link onClick={()=> {setPath('#myaccount')}} href="#myaccount">Contul meu</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </NavbarBootStrap.Collapse>
       </Container>
-    </Navbar>
+    </NavbarBootStrap>
   );
 }
 
-export default Header;
+export default Navbar;
